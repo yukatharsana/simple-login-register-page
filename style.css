@@ -123,7 +123,7 @@
   }
   
   .overlay {
-    background-image: url("https://png.pngtree.com/png-clipart/20240621/original/pngtree-flat-illustration-of-pink-flowers-in-a-glass-vase-filled-with-png-image_15380683.png");
+    background-image: url("./asserts/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
