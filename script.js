@@ -2,20 +2,22 @@ document.addEventListener("DOMContentLoaded",()=>{
     const container = document.getElementById("container");
     const signUpLink = document.getElementById("signUpLink");
     const signInLink = document.getElementById("signInLink");
-  
-    // Switch Sign Up
+    const signInForm = document.getElementById("signInForm");
+    const signUpForm = document.getElementById("signUpForm");
+    const forgotPasswordLinks = document.querySelectorAll(".forgot-password");  
+//  Click Action 
+// Sig up Switch
     signUpLink.addEventListener("click", (e) => {
       e.preventDefault();
       container.classList.add("right-panel-active");
     });
-  
-    // Switch  Sign In
+  // Sig in Switch
     signInLink.addEventListener("click", (e) => {
       e.preventDefault();
       container.classList.remove("right-panel-active");
     })
-    const signInForm = document.getElementById("signInForm");
-  const signUpForm = document.getElementById("signUpForm");
+  // Submit Action
+  // Signin Form
   signInForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const email = signInForm.querySelector('input[type="email"]').value;
@@ -29,7 +31,7 @@ document.addEventListener("DOMContentLoaded",()=>{
       alert("Please fill in all fields");
     }
   });
-
+// Siginup form
   signUpForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const name = signUpForm.querySelector('input[type="text"]').value;
@@ -45,7 +47,7 @@ document.addEventListener("DOMContentLoaded",()=>{
       alert("Please fill in all fields");
     }
   });
-  const forgotPasswordLinks = document.querySelectorAll(".forgot-password");
+
   forgotPasswordLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
