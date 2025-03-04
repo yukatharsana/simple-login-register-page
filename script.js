@@ -45,5 +45,12 @@ document.addEventListener("DOMContentLoaded",()=>{
       alert("Please fill in all fields");
     }
   });
+  const forgotPasswordLinks = document.querySelectorAll(".forgot-password");
+  forgotPasswordLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert("Forgot Password - Functionality to be implemented");
+    });
+  });
 
 })
