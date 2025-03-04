@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded",()=>{
     const signUpLink = document.getElementById("signUpLink");
     const signInLink = document.getElementById("signInLink");
   
-    // Switch to Sign Up
+    // Switch Sign Up
     signUpLink.addEventListener("click", (e) => {
       e.preventDefault();
       container.classList.add("right-panel-active");
     });
   
-    // Switch to Sign In
+    // Switch  Sign In
     signInLink.addEventListener("click", (e) => {
       e.preventDefault();
       container.classList.remove("right-panel-active");
@@ -30,5 +30,20 @@ document.addEventListener("DOMContentLoaded",()=>{
     }
   });
 
-  
+  signUpForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = signUpForm.querySelector('input[type="text"]').value;
+    const phone = signUpForm.querySelector('input[type="tel"]').value;
+    const email = signUpForm.querySelector('input[type="email"]').value;
+    const password = signUpForm.querySelector('input[type="password"]').value;
+
+    // Basic validation
+    if (name && phone && email && password) {
+      alert(`Sign Up Attempt:\nName: ${name}\nEmail: ${email}`);
+      // Here you would typically send data to backend
+    } else {
+      alert("Please fill in all fields");
+    }
+  });
+
 })
