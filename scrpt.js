@@ -13,5 +13,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     signInLink.addEventListener("click", (e) => {
       e.preventDefault();
       container.classList.remove("right-panel-active");
+    })
   
 })
